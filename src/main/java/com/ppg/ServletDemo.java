@@ -3,10 +3,7 @@ package com.ppg;
 import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet("/demo1")
@@ -17,11 +14,10 @@ public class ServletDemo extends HttpServlet {
         String myheader = req.getHeader("myheader");
         Cookie cookie = new Cookie("name","lhh");
         resp.addCookie(cookie);
-        String str = req.getParameter("hb3");
         String str2 = req.getParameter("name");
-        System.out.println(str);
         System.out.println(str2);
         System.out.println(myheader);
+        HttpSession session = req.getSession();
         resp.getWriter().write("hello!!!!");
     }
 
