@@ -21,6 +21,11 @@ public class ServletDemo extends HttpServlet {
         resp.getWriter().write("hello!!!!");
     }
 
+
+
+
+
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
