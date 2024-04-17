@@ -4,7 +4,7 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener
+//@WebListener
 public class MyRequestListener implements ServletRequestListener {
 
     @Override
