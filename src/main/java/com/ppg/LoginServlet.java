@@ -21,10 +21,10 @@ public class LoginServlet extends HttpServlet {
         String passw = req.getParameter("passw");
         HttpSession session = req.getSession();
         String name = (String) session.getAttribute("name");
-        if (name == null || name.equals("")) {
-            session.setAttribute("name", username);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/index");
-            requestDispatcher.forward(req, resp);
-        }
+//        if (name == null || name.equals("")) {
+//        }
+        session.setAttribute("name", username);
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/index");
+        requestDispatcher.forward(req, resp);
     }
 }

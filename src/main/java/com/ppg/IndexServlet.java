@@ -17,6 +17,10 @@ public class IndexServlet extends HttpServlet {
         String name=(String) session.getAttribute("name");
         if(name == null || name.equals("")){
             System.out.println("gun!!!");
+            resp.getWriter().write("gun!!!");
+        }else {
+            System.out.println("welcome");
+            resp.getWriter().write("welcome");
         }
     }
 }
